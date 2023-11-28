@@ -79,15 +79,17 @@ function vs class based views
 - Homework: read page 431-433 of Python Cookbook 3rd Edition
 - Homework: read first chapter of django book
 
+# Added github link:
+https://github.com/primecarecorp/202310CEIWDX_AZ-204
+
+# Those who want to get ahead: (this Friday or next Monday)
+Install Docker Desktop: https://docs.docker.com/desktop/install/windows-install/
+Tutorials: https://www.docker.com/play-with-docker/
 
 # Day 2:
 Add more pages/routes to our website
 Add Templates
 Add Tests
-
-# Those who want to get ahead: (this Friday or next Monday)
-Install Docker Desktop: https://docs.docker.com/desktop/install/windows-install/
-Tutorials: https://www.docker.com/play-with-docker/
 
 ## Add About Page:
 1) Added templates/about.html and added html code in it
@@ -100,3 +102,7 @@ Tutorials: https://www.docker.com/play-with-docker/
 3) Use/Extend base.html to other Templates (about.html and home.html)
 
 ## Add Tests:
+python manage.py test
+(optional) Further reading PyTest Articles/Tutorials
+https://docs.djangoproject.com/en/4.2/topics/testing/overview/
+
