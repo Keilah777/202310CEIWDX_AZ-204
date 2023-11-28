@@ -17,6 +17,10 @@ exit
 - Github Markdown Reference: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 
 ===
+# Django Tutorials
+https://docs.djangoproject.com/en/4.1/intro/tutorial01/
+
+===
 # Install PIP:
 mac: python -m ensurepip --upgrade
 win: py -m ensurepip --upgrade
@@ -79,11 +83,14 @@ function vs class based views
 - Homework: read page 431-433 of Python Cookbook 3rd Edition
 - Homework: read first chapter of django book
 
+Kill port: sudo lsof -t -i tcp:8000 | xargs kill -9
+
 # Added github link:
 https://github.com/primecarecorp/202310CEIWDX_AZ-204
 
 # Those who want to get ahead: (this Friday or next Monday)
 Install Docker Desktop: https://docs.docker.com/desktop/install/windows-install/
+  
 Tutorials: https://www.docker.com/play-with-docker/
 
 # Day 2:
@@ -106,3 +113,61 @@ python manage.py test
 (optional) Further reading PyTest Articles/Tutorials
 https://docs.djangoproject.com/en/4.2/topics/testing/overview/
 
+
+## Create a new App that can Post information to Database
+cd ..
+mkdir 3django
+cd 3django
+django-admin startproject mb_project .
+python manage.py startapp posts
+python manage.py migrate
+python manage.py runserver
+
+## Create a Database Model:
+https://docs.djangoproject.com/en/4.2/ref/models/fields/
+  
+### Activating a Model:
+1) Create a Migration File "makemigrations" command but does not execute the SQL commands
+python manage.py makemigrations posts
+2) Build Database with "migrate" command does execute the instructions in the migration file
+python manage.py migrate posts
+
+## Django Admin
+- To use Django Admin we need to create a "superuser"
+
+Type:
+1) Username
+2) Email
+3) Password
+
+python manage.py createsuperuser
+python manage.py runserver
+http://127.0.0.1:8000/admin/
+
+- Display posts app in Admin requires explicit mention in posts/admin.py
+- Add a Post
+- Handle Post Object as a String in posts/models.py
+- Display Database Content on our homepage: Views, Templates, URLConfs
+
+posts/views.py > Add ListView and Models
+mkdir templates
+touch templates/home.html
+
+- Let Django know where to look for Templates folder: mb_project/settings.py
+"DIRS": [os.path.join(BASE_DIR, 'templates')], # Added new
+Make sure to import "os" in the header
+
+- object_list
+In templates/home.html we use the Django Templating Language > for loop to list all the objects within object_list
+object_list: the name of the variable that ListView returns to us
+
+- Django Best Practice: rename object_list to a more specific name
+Provide an explicit name to "object_list" using "context-object-name": make it easier to know what is contained in the template
+
+- Link main project with app urls
+setup URLConfs mb_project/urls.py to include posts
+
+- Create an app level urls.py:
+touch posts/urls.py
+
+python manage.py runserver
