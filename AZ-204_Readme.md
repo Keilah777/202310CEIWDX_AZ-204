@@ -230,3 +230,5 @@ make sure to not make any changes to AJ_GithubRepo Folder, use this folder only 
 Do Django development in a seperate folder, and you don't need to push your code to GitHub.
 
 Reference: https://docs.github.com/en/get-started/using-git/getting-changes-from-a-remote-repository
+
+---
