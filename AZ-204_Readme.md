@@ -214,3 +214,4 @@ python manage.py runserver
 ### Git Introduction
 
 git clone https://github.com/primecarecorp/202310CEIWDX_AZ-204.git
+git remote add origin https://github.com/primecarecorp/202310CEIWDX_AZ-204.git
