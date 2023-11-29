@@ -213,9 +213,20 @@ python manage.py runserver
 
 ### Git Introduction
 
-git clone https://github.com/primecarecorp/202310CEIWDX_AZ-204.git
-git remote add origin https://github.com/primecarecorp/202310CEIWDX_AZ-204.git
-git fetch origin
-git merge origin/main
+To follow along with AJ's Django folder do the following:
+
+1 time steps:
+1) Create a directory: AJ_GithubRepo
+2) cd AJ_GithubRepo
+3) git init
+4) git clone https://github.com/primecarecorp/202310CEIWDX_AZ-204.git
+5) git remote add origin https://github.com/primecarecorp/202310CEIWDX_AZ-204.git
+
+Everytime AJ uploads code in his GitHub Repo: 202310CEIWDX_AZ-204, run following commands from folder AJ_GithubRepo:
+- git fetch origin
+- git merge origin/main
+
+make sure to not make any changes to AJ_GithubRepo Folder, use this folder only to pull code from AJ's repo.
+Do Django development in a seperate folder, and you don't need to push your code to GitHub.
 
 Reference: https://docs.github.com/en/get-started/using-git/getting-changes-from-a-remote-repository
