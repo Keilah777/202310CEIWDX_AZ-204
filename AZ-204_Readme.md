@@ -89,7 +89,9 @@ Kill port: sudo lsof -t -i tcp:8000 | xargs kill -9
 https://github.com/primecarecorp/202310CEIWDX_AZ-204
 
 # Those who want to get ahead: (this Friday or next Monday)
-Install Docker Desktop: https://docs.docker.com/desktop/install/windows-install/
+Install Docker Desktop: 
+- Windows: https://docs.docker.com/desktop/install/windows-install/
+- Mac: https://docs.docker.com/desktop/install/mac-install/
   
 Tutorials: https://www.docker.com/play-with-docker/
 
@@ -125,7 +127,31 @@ python manage.py runserver
 
 ## Create a Database Model:
 https://docs.djangoproject.com/en/4.2/ref/models/fields/
-  
+
+- Download  DBeaver to view the sqllite Database: https://dbeaver.io/download/
+- Or use DB Shell to query the database
+Goto the folder where the database is and then:
+sqlite3  db.sqlite3
+Then depending on what you want:
+.tables
+or .schema
+Instead of invoking sqlite3 directly you could do:
+python manage.py dbshell 
+python manage.py inspectdb
+please see https://docs.djangoproject.com/en/3.0/ref/django-admin/#django-admin-inspectdb for additional info.
+
+Here is a query:
+python3 manage.py dbshell
+.tables
+
+Here is another Query: Find the name of the table you are looking for, then run the following commands:
+.header on
+.mode column
+pragma table_info('table you are looking for');
+Do not forget the semicolon in the last instruction.
+
+But please do yourself a favour and get a GUI database client. Life is much easier when you have one.
+
 ### Activating a Model:
 1) Create a Migration File "makemigrations" command but does not execute the SQL commands
 python manage.py makemigrations posts
@@ -171,3 +197,18 @@ setup URLConfs mb_project/urls.py to include posts
 touch posts/urls.py
 
 python manage.py runserver
+
+# Day 3:
+- Challenge Labs
+- Attendance
+- Git Introduction - based on our conversation yesterday
+- Database Viewer/Browser/Explorer: DBeaver, SQL Bench, SQL Server Management Studio, Azure Data Studio, 
+- If anyone still stuck on their machine to run any of my code then let me know here.
+
+- Django Continuation of Post App:
+    - Add Tests in this App (with Database)
+
+-  Django Blog App:
+
+
+### Git Introduction
