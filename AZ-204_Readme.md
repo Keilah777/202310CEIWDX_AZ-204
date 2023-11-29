@@ -215,3 +215,7 @@ python manage.py runserver
 
 git clone https://github.com/primecarecorp/202310CEIWDX_AZ-204.git
 git remote add origin https://github.com/primecarecorp/202310CEIWDX_AZ-204.git
+git fetch origin
+git merge origin/main
+
+Reference: https://docs.github.com/en/get-started/using-git/getting-changes-from-a-remote-repository
