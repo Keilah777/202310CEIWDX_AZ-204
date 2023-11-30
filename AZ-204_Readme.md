@@ -36,6 +36,34 @@ exit()
 ---
 python -c "import django; print(django.get_version())"
 ---
+# Django useing Virtual Environment venv:
+
+First, create the virtual environment
+python3 -m venv django-env
+
+Then, use this environment:
+
+In mac:
+source django-env/bin/activate
+
+In cmd.exe
+venv\Scripts\activate.bat
+In PowerShell
+venv\Scripts\Activate.ps1
+
+
+Next, install django
+python -m pip install django
+
+Finally test django is working
+django-admin startproject mysite
+
+Deactivate the virtual environment:
+deactivate 
+
+If the above does not work then try:
+source deactivate
+--
 # Start django project
 pipenv install django==2.1
 pipenv shell
@@ -223,6 +251,9 @@ To follow along with AJ's Django folder do the following:
 5) git remote add origin https://github.com/primecarecorp/202310CEIWDX_AZ-204.git
 
 Everytime AJ uploads code in his GitHub Repo: 202310CEIWDX_AZ-204, run following commands from folder AJ_GithubRepo:
+- git pull origin
+
+A longer version of git pull is:
 - git fetch origin
 - git merge origin/main
 
@@ -232,4 +263,15 @@ Do Django development in a seperate folder, and you don't need to push your code
 Reference: https://docs.github.com/en/get-started/using-git/getting-changes-from-a-remote-repository
 
 ---
----
+
+# Day 4
+
+- https://www.w3schools.com/git/git_staging_environment.asp?remote=github 
+
+- Database Viewer/Browser/Explorer: DBeaver, SQL Bench, SQL Server Management Studio, Azure Data Studio, 
+- If anyone still stuck on their machine to run any of my code then let me know here.
+
+- Django Continuation of Post App:
+    - Add Tests in this App (with Database)
+
+-  Django Blog App:
