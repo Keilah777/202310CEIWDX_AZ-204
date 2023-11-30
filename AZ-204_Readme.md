@@ -11,6 +11,9 @@ pipenv shell
 exit
 
 ===
+# Linux:
+https://www.lpi.org/our-certifications/lpic-1-overview/ 
+
 # Markdown:
 - Tutorial: https://www.markdowntutorial.com/
 - Markdown Cheatsheet: https://www.markdownguide.org/cheat-sheet/
@@ -263,15 +266,3 @@ Do Django development in a seperate folder, and you don't need to push your code
 Reference: https://docs.github.com/en/get-started/using-git/getting-changes-from-a-remote-repository
 
 ---
-
-# Day 4
-
-- https://www.w3schools.com/git/git_staging_environment.asp?remote=github 
-
-- Database Viewer/Browser/Explorer: DBeaver, SQL Bench, SQL Server Management Studio, Azure Data Studio, 
-- If anyone still stuck on their machine to run any of my code then let me know here.
-
-- Django Continuation of Post App:
-    - Add Tests in this App (with Database)
-
--  Django Blog App:
